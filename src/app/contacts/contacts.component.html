@@ -1,0 +1,17 @@
+<div class='row justify-content-center'>
+  <div class='col-5 m-2' *ngFor="let contact of contacts">
+    <div class="card text-white bg-secondary row">
+      <div class='row align-items-center'>
+    
+        <img class="col-6 imagesize " src="{{contact.photo}}">
+        <div class="col-6">
+          <h4>{{contact.username}}</h4>
+          <a href="mailto:{{contact.email}}"class='badge badge-light'>{{contact.email}}</a>
+        
+          <button type="button" class="btn btn-outline-light button mt-2" (click)="openDetails(contact.id)">Show profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
